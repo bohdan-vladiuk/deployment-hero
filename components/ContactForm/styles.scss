@@ -1,0 +1,16 @@
+@tailwind utilities;
+
+.contact {
+  @apply w-full py-10 px-4 lg:px-6 xl:px-[46px] flex flex-col gap-4 border border-gray-200 rounded-[20px] shadow-custom;
+
+  form {
+    @apply flex flex-col items-start;
+
+    label {
+      @apply font-poppins text-[12px] leading-[21px] text-gray-500;
+    }
+    .form-control {
+      @apply w-full px-6 py-3 bg-[#f4f5f9] rounded-[20px] text-[12px] leading-[18px] text-[#6b7280] outline-offset-0 focus:outline-gray-200;
+    }
+  }
+}

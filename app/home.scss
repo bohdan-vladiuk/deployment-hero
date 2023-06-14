@@ -1,0 +1,206 @@
+@tailwind utilities;
+
+main {
+  @apply overflow-hidden bg-white -z-10;
+  @apply bg-[length:1440px_1680px] bg-[url('/images/Bg_Main.png')] bg-no-repeat bg-[center_top];
+}
+
+.hero-section {
+  @apply py-4 lg:py-14 xl:py-14;
+  @apply px-4 lg:px-12 xl:px-[88px];
+
+  .wrapper {
+    @apply p-4 grid lg:gap-6 lg:grid-cols-2 xl:gap-20;
+
+    .hero-image {
+      @apply w-full;
+    }
+  }
+}
+
+.service-section {
+  @apply py-8 xl:py-32;
+  @apply px-4 lg:px-12 xl:px-[80px];
+
+  .wrapper {
+    @apply p-2 flex flex-col gap-12;
+
+    .card {
+      @apply rounded-[20px] bg-white p-6 border border-[rgba(230,232,236,0.5)] shadow-sm;
+    }
+  }
+}
+
+.integration-section {
+  @apply py-10 lg:py-16 xl:py-[93px];
+  @apply px-8 lg:px-12 xl:px-[88px];
+  @apply overflow-hidden bg-white;
+
+  .wrapper {
+    @apply grid gap-14 md:grid-cols-2;
+
+    .mobile-integrations {
+      @apply w-[296px] h-[301px] mx-auto bg-[url('/images/Connections.png')] bg-contain bg-no-repeat relative md:hidden;
+
+      &:after {
+        @apply absolute w-[1100px] h-[430px] top-[130px] right-[130px];
+        @apply bg-[url('/images/Bg_Rocket.png')] bg-no-repeat bg-[right_top] bg-[length:70%];
+      }
+    }
+
+    .desktop-integrations {
+      @apply hidden w-full h-full justify-center items-center relative md:flex;
+
+      &:after {
+        @apply absolute w-[1100px] h-[430px];
+        @apply top-[290px] md:right-[140px] lg:right-[200px] xl:right-[280px];
+        @apply bg-[url('/images/Bg_Rocket.png')] bg-no-repeat bg-[right_top] bg-[length:80%] lg:bg-[length:90%] xl:bg-[length:100%];
+      }
+    }
+  }
+}
+
+.about-section {
+  @apply min-h-[780px] flex items-center;
+  @apply px-8 lg:px-12 xl:px-[88px];
+
+  .wrapper {
+    @apply flex flex-col gap-6 py-10 md:flex-row md:items-center md:gap-20 md:py-0;
+  }
+}
+
+.choose-section {
+  @apply min-h-[780px] flex items-center relative;
+  @apply px-4 lg:px-12 xl:px-[88px];
+
+  &:after {
+    @apply absolute bg-[url('/images/Bg_Choose.png')] bg-[length:100%_100%] bg-no-repeat bg-[right_top];
+    @apply w-[1446px] h-[2180px] top-[-160px] right-[-583px];
+    @apply sm:w-[1446px] sm:h-[1800px] sm:top-[-165px] sm:right-[-400px];
+    @apply md:w-[1426px] md:h-[1560px] md:top-[-100px] md:right-[-300px];
+    @apply lg:w-[1300px] lg:h-[950px] lg:top-[-90px] lg:right-[-40px];
+    @apply xl:w-[1426px] xl:h-[938px] xl:top-[-160px] xl:right-[1px];
+  }
+
+  .wrapper {
+    @apply flex flex-col gap-10 py-10 lg:flex-row lg:items-center lg:py-0 xl:gap-20 z-10;
+
+    .card {
+      @apply pt-4 p-6 bg-white rounded-[20px] border-[1px_solid_rgba(230,232,236,0.5)] shadow-[5px_5px_20px_1px_rgba(115,115,115,0.05)];
+    }
+    .form-control {
+      @apply w-full h-[50px] py-2 px-6 rounded-full bg-white border border-[#dfe6fe] outline-none outline-offset-0 focus:outline-gray-100;
+    }
+  }
+}
+
+.library-section {
+  @apply py-10 lg:py-24 xl:pt-[165px] xl:pb-[198px] relative;
+  @apply px-8 lg:px-12 xl:px-[88px];
+
+  &:after {
+    @apply absolute bg-no-repeat bg-[left_bottom] z-50;
+    @apply w-[205px] h-[563px] bg-[url('/images/Bg_Rocket2.png')] left-[-53px] bottom-[152px];
+    @apply sm:w-[282px] sm:h-[455px] sm:bg-[url('/images/Bg_Rocket1.png')] sm:left-[-30px] sm:bottom-[110px];
+    @apply lg:left-[45px] lg:bottom-[175px];
+    @apply xl:left-[85px] xl:bottom-[270px];
+  }
+
+  .wrapper {
+    @apply flex flex-col items-center gap-6 lg:flex-row lg:gap-10 xl:gap-20 relative z-10;
+
+    .card-container {
+      @apply p-2 flex flex-col gap-2 shrink-0 lg:pl-[70px];
+      @apply lg:max-w-[430px] xl:max-w-[530px];
+      @apply sm:mt-24 lg:mt-0;
+
+      .card {
+        @apply flex py-4 px-2 gap-6 items-center;
+      }
+    }
+  }
+}
+
+.works-section {
+  @apply py-4 sm:py-8 md:py-12 xl:py-[88px] relative;
+  @apply px-4 sm:px-8 md:px-12 xl:px-[88px];
+
+  &:after {
+    @apply absolute bg-[url('/images/Bg_Works.svg')] bg-no-repeat bg-[left_top] bg-[length:100%_100%];
+    @apply w-[1440px] h-[1525px] left-[-230px] top-[-230px];
+    @apply sm:left-[-220px] sm:top-[-140px];
+    @apply lg:left-[-120px] lg:top-[-200px];
+    @apply xl:left-0 xl:top-[-340px];
+  }
+
+  .wrapper {
+    @apply grid lg:grid-cols-2 lg:gap-14 xl:gap-[88px] relative z-10;
+
+    .card-container {
+      @apply flex flex-col gap-4;
+
+      .card {
+        @apply flex items-center gap-6 py-4 pl-4 pr-10 rounded-[60px] bg-white shadow-custom lg:pr-12;
+
+        .card-number {
+          @apply flex flex-none justify-center items-center rounded-full bg-indigo-500 text-white font-poppins font-medium text-[24px];
+          @apply w-10 h-10 sm:w-16 sm:h-16 lg:w-[72px] lg:h-[72px];
+        }
+      }
+    }
+  }
+}
+
+.client-section {
+  @apply py-10 md:py-16 xl:py-[134px];
+  @apply px-8 md:px-12 xl:px-[88px];
+
+  .wrapper {
+    @apply flex flex-col gap-4 lg:flex-row lg:gap-12 relative z-10;
+
+    .indicator {
+      @apply w-[10px] h-[10px] rounded-full border-[1px] border-indigo-500;
+      &.active {
+        @apply w-[26px] bg-indigo-500;
+      }
+    }
+  }
+}
+
+.price-section {
+  @apply py-10 md:py-16 xl:py-[88px] relative;
+  @apply md:px-12 xl:px-[88px];
+
+  &:before {
+    @apply absolute bg-[url('/images/Bg_Price.svg')] bg-no-repeat bg-[left_top] bg-[length:100%_100%];
+    @apply w-[2540px] h-[1700px] left-[-600px] top-[-480px];
+    @apply lg:w-[1440px] lg:h-[787px] lg:left-0 lg:top-[-120px];
+    @apply xl:top-[-10px];
+  }
+
+  &:after {
+    @apply absolute bg-[url('/images/Bg_Rocket3.png')] bg-no-repeat bg-[right_bottom];
+    @apply lg:w-[1351px] lg:h-[554px] lg:right-[50px] lg:bottom-[100px];
+    @apply xl:right-[90px] xl:bottom-[200px];
+  }
+
+  .wrapper {
+    @apply flex flex-col p-2 gap-6 items-center z-10 relative;
+  }
+}
+
+.contact-section {
+  @apply pb-20 md:py-16 xl:py-[88px] xl:mb-12 relative;
+  @apply px-4 md:px-12 xl:px-[88px] gap-2;
+
+  &:before {
+    @apply absolute bg-[url('/images/Bg_Contact.svg')] bg-no-repeat bg-[left_top];
+    @apply w-[1440px] h-[228px] left-[-500px] top-[-30px];
+    @apply md:left-[-200px] md:top-[30px];
+    @apply lg:left-0 md:top-[10px];
+  }
+
+  .wrapper {
+    @apply grid p-2 gap-6 lg:grid-cols-2 relative z-10;
+  }
+}

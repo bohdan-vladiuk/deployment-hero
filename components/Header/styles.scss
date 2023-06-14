@@ -1,0 +1,21 @@
+@tailwind utilities;
+
+.header {
+  @apply w-full bg-none;
+
+  nav {
+    @apply sticky top-0 z-10 flex gap-2 bg-none h-[104px] text-[#475569];
+
+    .menu-items {
+      @apply font-poppins font-medium px-4 xl:px-8;
+    }
+
+    .mobile-menu-items {
+      @apply w-full py-6 flex items-center justify-center cursor-pointer text-indigo-700 bg-white hover:text-gray-700 hover:bg-indigo-200;
+    }
+
+    button {
+      @apply px-6 py-2 font-poppins font-medium;
+    }
+  }
+}

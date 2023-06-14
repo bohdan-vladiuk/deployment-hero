@@ -1,7 +1,5 @@
 import "./globals.scss";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import { inter, poppins, outfit } from "./fonts";
 
 export const metadata = {
   title: "Deployment Hero",
@@ -14,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${outfit.variable} ${poppins.variable}`}>
       <body className={inter.className}>{children}</body>
     </html>
   );
